@@ -1,0 +1,21 @@
+server:
+  port: 8001
+
+spring:
+  application:
+    name: consumer-movie
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://user:123456@localhost:8762/eureka/
+  instance:
+    prefer-ip-address: true
+
+feign:
+  hystrix:
+    enabled: true
+
+management:
+  security:
+    enabled: false

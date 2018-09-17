@@ -1,0 +1,17 @@
+server:
+  port: 8003
+
+spring:
+  application:
+    name: hystirx-turbine
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://user:123456@localhost:8762/eureka/
+  instance:
+    prefer-ip-address: true
+
+turbine:
+  app-config: provider-user
+  cluster-name-expression: "'default'"

@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: eureka-server-auth
+
+server:
+  port: 8762
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://user:123456@localhost:8762/eureka/
+    register-with-eureka: false
+    fetch-registry: false
+  instance:
+    prefer-ip-address: true
+    lease-expiration-duration-in-seconds: 30
+
+security:
+  basic:
+    enabled: true
+  user:
+    name: user
+    password: 123456

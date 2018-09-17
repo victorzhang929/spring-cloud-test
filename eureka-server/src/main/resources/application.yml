@@ -1,0 +1,11 @@
+server:
+  port: 8761
+
+eureka:
+  client:
+    #一个服务中心配置fetch-registry，register-with-eureka为false,表示不获取服务注册信息，不将自己注册
+    #若是高可用服务中心，需要两个参数配置成true
+    fetch-registry: false
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
